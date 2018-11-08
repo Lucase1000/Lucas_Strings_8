@@ -1,0 +1,77 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Strings_8_Lucas;
+import java.util.Scanner;
+
+/**
+ *
+ * @author LutherenOG
+ */
+public class Strings_8_Lucas {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        boolean t = true;
+        //a true or false so at the end of the survey the build can stop looping
+        while(t==true){
+            
+        Scanner sc = new Scanner(System.in);
+        //takes user input
+        System.out.println("What's your name?");
+        
+        String name = sc.nextLine();
+        //creates a string that rembers the users name
+       
+        System.out.println("Well, " + name.trim() + " will you answer a couple questions for me?");
+        
+        String yon = sc.nextLine().toLowerCase();
+        
+        if (yon.contains("y")){
+        //checks if the user wants to play... kinda like a start button
+        
+        System.out.println("What school do you go to?");
+        String school = sc.nextLine().toLowerCase();
+         //creates a string that rembers the users name
+        if(school.contains("cast")){
+            System.out.print("Ew...");
+            //reminds cast tech students they still go to the weirdest school in the country
+        }
+        System.out.println("What grade are you in?");
+        String grade = sc.nextLine().toLowerCase();
+        //creates a string that rembers the users grade level
+        System.out.println("What is your ID number?");
+        int i = sc.nextInt();
+         //creates a string that rembers the users Student ID
+        System.out.println("What is your GPA?");
+        double gpa = sc.nextDouble();
+         //creates a string that rembers the users GPA
+         
+        System.out.println("Name: "+name.trim());
+        System.out.println("school: "+school.trim());
+        System.out.println("grade: "+grade.trim());
+        //The trim method will remove any unnecessary spaces
+        System.out.println("Student ID: "+i);
+        System.out.println("GPA: "+gpa);
+        t=false; //finishes the build
+        //t = false will let the build finish
+            }
+        else if(yon.contains("n")){
+            System.out.println("Come back if you change your mind");
+            t=false; //finishes the build
+        }
+        else{
+        System.out.println("It seems there has been an error try again");
+            t=false;    //finishes the build
+        }
+        }
+         
+    }
+    
+}
+
+
